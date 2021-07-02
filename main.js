@@ -4,13 +4,13 @@
     21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" +
     22) Create an object with properties such name, surname, email +
     23) Delete Email from the previously created object +
-    24) Create an array with 10 strings in it
-    25) Print in the console every string in the previous array
-    26) Create an array with 100 random numbers in it
-    27) Wrote a function to get the MAX and the MIN from the previously created array
-    28) Create an array of arrays, in which every array has 10 random numbers
-    29) Create a function that gets 2 arrays and returns the longest one
-    30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+    24) Create an array with 10 strings in it +
+    25) Print in the console every string in the previous array +
+    26) Create an array with 100 random numbers in it + 
+    27) Wrote a function to get the MAX and the MIN from the previously created array + 
+    28) Create an array of arrays, in which every array has 10 random numbers +
+    29) Create a function that gets 2 arrays and returns the longest one +
+    30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values +
 
     DOM 
 
@@ -60,3 +60,54 @@ function min(array){
 
 // console.log(max(arrayHundred))
 // console.log(min(arrayHundred))
+
+
+let arrayOfArrays = []
+
+for(let i = 0; i < 10; i++){    
+    let arr = []
+    for(let j=0; j < 10; j++){
+        arr.push(Math.floor(Math.random()*10))
+    }
+    arrayOfArrays.push(arr)
+}
+
+// console.log(arrayOfArrays[0])
+
+// for(let i = 0; i < 10; i++){    
+//     let arr = []
+//     for(let j=0; j < 10; j++){
+//         console.log(arrayOfArrays[i][j])
+//     }
+// }
+
+
+function longestOne(arr1, arr2){
+    if(arr1.length > arr2.length){
+        return arr1
+    }
+    else {
+        return arr2
+    }
+}
+
+// console.log(longestOne([1, 2, 32, 4], [8, 9, 9, 11, 1, 1]))
+
+function higherSumOfEl(arr1, arr2){
+    let sum = 0
+    for(let i = 0; i < arr1.length; i++){
+        sum += arr1[i]
+    }
+    let sum2 = 0
+    for(let i = 0; i < arr2.length; i++){
+        sum2 += arr2[i]
+    }
+    if(sum>sum2){
+        return arr1
+    }
+    else{
+        return arr2
+    }
+}
+
+// console.log(higherSumOfEl([1, 1, 1], [1, 2, 3]))
