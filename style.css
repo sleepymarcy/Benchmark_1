@@ -1,32 +1,101 @@
 /*
     CSS EXERCISES
 
-    11) Give a maximum width to the body and center it in the page
-    12) Set every h1 to be centered
-    13) Change the color of each link in the page
-    14) Create a class with a border
-    15) Set table to have rounded corners
-    16) Add margin between every paragraph
-    17) Create a class which change font size and boldness
-    18) Create a class to hide a content
-    19) Add a green border to each td
-    20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+    11) Give a maximum width to the body and center it in the page +
+    12) Set every h1 to be centered +
+    13) Change the color of each link in the page +
+    14) Create a class with a border +
+    15) Set table to have rounded corners +
+    16) Add margin between every paragraph +
+    17) Create a class which change font size and boldness +
+    18) Create a class to hide a content +
+    19) Add a green border to each td +
+    20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) ) 
+        I assume that you wanted me to create dotted red border for top and bottom td
     
 */
 body {
+    max-width: 1080px; 
+	margin: 0 auto !important; 
+	float: none !important; 
     font-family: 'DM Sans', sans-serif;
     font-size: larger;
     padding: 10px;
     margin-left: 50px;
 }
 
-
-table {
-    border-collapse: collapse;
+h1 {
+    text-align: center;
 }
 
-td, th {
+/* I have only one link which is email, others at 'under' the image so you cannot see any change
+    but if I had to change everys link color I would use ID: #link1 {color: red} ; #link2 {color: blue} etc. 
+    or  class: .link1 {color: red} ; .link2 {color: blue} etc.
+    and then I would put the ID/class in the HTML link:
+        <a id="link1" / class="link1" href="https://www.youtube.com/watch?v=QQNL83fhWJU">
+*/
+
+a {
+    color: plum;
+}
+
+p {
+    margin: 5px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
+}
+
+td {
+    border-left: 1px solid rgb(113, 230, 113);
+    border-right: 1px solid rgb(113, 230, 113);
+    border-top: 1px dotted red;
+    border-bottom: 1px dotted red;
+    text-align: center;
+    padding: 8px;
+}
+
+table tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+  }
+  
+/* top-right border-radius */
+table tr:first-child th:last-child {
+border-top-right-radius: 6px;
+}
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+border-bottom-left-radius: 6px;
+}
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+border-bottom-right-radius: 6px;
+}
+
+.border {
+    padding: 10px;
+    display: inline-block;
+    border: plum;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.change {
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.hideMe {
+    display: none;
 }
