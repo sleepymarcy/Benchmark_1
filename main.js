@@ -1,9 +1,9 @@
 /*
     JS EXERCISES
 
-    21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
-    22) Create an object with properties such name, surname, email
-    23) Delete Email from the previously created object
+    21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" +
+    22) Create an object with properties such name, surname, email +
+    23) Delete Email from the previously created object +
     24) Create an array with 10 strings in it
     25) Print in the console every string in the previous array
     26) Create an array with 100 random numbers in it
@@ -26,3 +26,37 @@
     40) Write a function to empty a list
     
 */
+
+let x = "John"
+let y = "Doe"
+// console.log(x + " <> " + y)
+
+const object = {
+    name: "Martyna",
+    surname: "Sowinska",
+    email: "martyna.sowinksa@hotmail.com"
+}
+
+delete object.email
+// console.log(object)
+
+let arrayTen = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+
+// console.log(arrayTen)
+
+let arrayHundred = []
+while(arrayHundred.length < 100){
+    let r = Math.floor(Math.random() * 100) + 1;
+    if(arrayHundred.indexOf(r) === -1) arrayHundred.push(r)
+}
+
+function max(array){
+    return Math.max.apply(0, array)
+}
+
+function min(array){
+    return Math.min.apply(0, array)
+}
+
+// console.log(max(arrayHundred))
+// console.log(min(arrayHundred))
